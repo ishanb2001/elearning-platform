@@ -5,7 +5,7 @@ function ContentComponent() {
     return (
         <div className="content-container">
             <div className="text-button-container">
-                <h1>Comprehensive<br/>Online Platform<br/>For Holistic Design</h1>
+                <h1>Comprehensive<br/>Online Platform<br/>For Learning</h1>
                 <p>This is some smaller paragraph text.</p>
                 <div className="button-container">
                     <button className="menu-button">Button 1</button>
