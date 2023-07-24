@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Home';
 import ContentComponent from './Header';
 import CourseCategories from './Filter';
+import TrendingCourses from './TrendingCourses';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Home/>
       <ContentComponent/>
       <CourseCategories/>
+      <TrendingCourses/>
     </div>
   );
 }

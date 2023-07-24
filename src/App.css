@@ -132,6 +132,46 @@ body {
   cursor: pointer;
 }
 
+/* TrendingCourses.css */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  margin: 0;
+}
+
+.view-more-button {
+  background-color: #008CBA; /* Blue */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 30%;
+  padding: 10px;
+}
+
+
+
+
+
 
 @media screen and (max-width: 1000px) {
   .content-container {
