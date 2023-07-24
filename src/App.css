@@ -1,7 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
 body {
   margin: auto;
-  max-width: 1800px;
-  background-color:;
+  max-width: 1500px;
+  background-color:#000000;
+  font-family: 'SF Pro Display', sans-serif;                                               
+  color: white
 }
 
 .navbar {
@@ -39,6 +43,7 @@ body {
   justify-content: space-between;
   align-items: baseline;
   font-size: 50px;
+  flex-wrap: wrap;
 }
 
 .text-button-container {
@@ -50,6 +55,42 @@ body {
   display: flex;
   gap: 10px;
 }
+
+.menu {
+  display: none;
+}
+
+.menu.open {
+  display: block;
+}
+
+.search-container {
+  display: none;
+  flex: 1;
+}
+
+.search-container.open {
+  display: block;
+}
+
+.search-toggle {
+  display: none;
+}
+
+.search-toggle {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+
 
 .content-button {
   padding: 10px;
@@ -64,9 +105,16 @@ body {
   gap: 30px;
 }
 
+.card-container-trending {
+  padding: 40px 0px 0px 0px;
+  flex: 0.5 1;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
 .card1 {
   padding: 20px;
-  background-color: #B085E7;
   border-radius: 3px;
   font-size: 20px;
 }
@@ -91,6 +139,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -117,6 +166,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
+  justify-content: flex-start;
 }
 
 .button-f {
@@ -176,11 +226,15 @@ body {
 @media screen and (max-width: 1000px) {
   .content-container {
       flex-direction: column;
+      font-size: 20px;
   }
 
   .text-button-container, .card-container {
       margin-right: 0;
       margin-bottom: 10px;
+      flex: 100%;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -194,4 +248,32 @@ body {
       width: 100%;
       margin-top: 1em;
   }
+
+  .card-container-trending {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-container-trending .card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  
 }
+
+@media screen and (min-width: 600px) {
+  .menu-toggle, .search-toggle {
+      display: none;
+  }
+  
+  .search-container {
+      display: block;
+  }
+
+  .menu {
+      display: flex;
+  }
+}
+

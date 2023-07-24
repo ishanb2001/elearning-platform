@@ -10,8 +10,12 @@ function App() {
   return (
     <div className="App">
       <Home/>
+      <div style={{marginBottom: 50}}>
       <ContentComponent/>
+      </div>
+      <div style={{marginBottom: 50}}>
       <CourseCategories/>
+      </div>
       <TrendingCourses/>
     </div>
   );

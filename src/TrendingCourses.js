@@ -6,10 +6,10 @@ const TrendingCourses = () => {
     <div>
       <div className="header-container">
         <h1 className="header">What's Trending</h1>
-        <button className="view-more-button">View More Courses</button>
+        <button className="menu-button">View More Courses</button>
       </div>
 
-      <div className="card-container">
+      <div className="card-container-trending">
         <div className="card">Course 1</div>
         <div className="card">Course 2</div>
         <div className="card">Course 3</div>
