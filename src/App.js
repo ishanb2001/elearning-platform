@@ -6,21 +6,33 @@ import CourseCategories from './Filter';
 import TrendingCourses from './TrendingCourses';
 import Benfits from './Benifits';
 import Benifits from './Benifits';
+import TextNearTop from './Card';
+import CourseImage from './CourseImage';
 
 
 function App() {
   return (
     <div className="App">
       <Home/>
-      <div style={{marginBottom: 120}}>
+      <div style={{marginBottom: 70}}>
       <ContentComponent/>
       </div>
-      <div style={{marginBottom: 120}}>
+      <div style={{marginBottom: 65}}>
       <CourseCategories/>
       </div>
-      <Benfits/>
+      <div style={{marginBottom: 60}}>
       <TrendingCourses/>
       <div style={{marginTop: 60}}>
+
+      <TextNearTop />
+      <div style={{marginTop: 60}}>
+       <CourseImage/>
+      </div>
+      </div>
+      </div>
+
+      <div style={{marginTop: 60}}>
+
       
       </div>
     </div>

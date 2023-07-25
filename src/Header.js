@@ -6,7 +6,7 @@ function ContentComponent() {
         <div className="content-container">
             <div className="text-button-container">
                 <h1 style={{marginBottom:0}}>Comprehensive <span style={{color: 'rgb(99, 91, 255)'}}>Online Platform</span> For Learning</h1>
-                <p style={{color:'#425466', marginTop:30, marginBottom: 30,marginRight:200, fontSize:20, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="body" style={{color:'#425466', marginTop:30, marginBottom: 30, fontSize:18, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <div className="button-container">
                     <button className="button-f" style={{backgroundColor: 'black', color: 'white'}}>Button 1</button>
                     <button className="button-f" style={{border: 0, backgroundColor: '#F2F4FB', color: 'black'}}>Button 2</button>
