@@ -11,11 +11,7 @@ function Home() {
         ☰
     </button>
     <img alt="Logo" className="logo" />
-    <div className={`menu ${menuOpen ? 'open' : ''}`}>
-        <button className="menu-button">Home</button>
-        <button className="menu-button">About</button>
-        <button className="menu-button">Contact</button>
-    </div>
+    
     <div className="right-container">
         <div className={`search-container ${searchOpen ? 'open' : ''}`}>
             <input type="text" placeholder="Search.." className="search-input" />
@@ -23,6 +19,13 @@ function Home() {
         <button className="search-toggle" onClick={() => setSearchOpen(!searchOpen)}>
             🔍
         </button>
+    </div>
+
+    <div className={`menu ${menuOpen ? 'open' : ''}`}>
+        <button className="menu-button">Home</button>
+        <button className="menu-button">About</button>
+        <button className="menu-button">Contact</button>
+        <button className="menu-button">Contact</button>
     </div>
 </nav>
     );
