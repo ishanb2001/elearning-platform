@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Logo from './Logo.png';
 
 function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -10,11 +11,11 @@ function Home() {
     <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
     </button>
-    <img alt="Logo" className="logo" />
+    {<img src={Logo} style={{width: 40}} alt="Background"/>}
     
     <div className="right-container">
         <div className={`search-container ${searchOpen ? 'open' : ''}`}>
-            <input type="text" placeholder="Search.." className="search-input" />
+            <input type="text" style={{marginLeft: 40}} placeholder="Search.." className="search-input" />
         </div>
         <button className="search-toggle" onClick={() => setSearchOpen(!searchOpen)}>
             🔍

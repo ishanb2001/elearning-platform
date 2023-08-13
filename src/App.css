@@ -3,7 +3,7 @@
 body {
   margin: auto;
   max-width: 1200px;
-  background-color:#F2F4FB;
+  background-color:white;
   font-family: 'SF Pro Display', sans-serif;
   /*font-family: 'Plus Jakarta Sans', sans-serif;*/                                               
   color: black;
@@ -14,8 +14,12 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1em;
+  padding: 0.3em 2em;
   border-bottom: 1px solid black;
+  background: black; /* Add black background */
+  border-radius: 15px; /* Add rounded corners */
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .logo {
@@ -32,11 +36,47 @@ body {
 
 .menu-button {
   margin: 0.5em;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: 1px solid black;
-  background-color: white;
+  padding: 0.8em 1em;
+  border-radius: 10px; /* Adjust rounded corners */
+  border: 1px solid white; /* Add white border */
+  background-color: transparent; /* Remove background */
   cursor: pointer;
+  color: white; /* Set text color to white */
+  transition: 0.3s; /* Add transition for smooth hover effect */
+}
+
+.menu-button:hover {
+  background-color: white; /* Add white background on hover */
+  color: black; /* Set text color to black on hover */
+}
+
+.menu-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.search-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+.search-input {
+  border: 1px solid white;
+  background: none;
+  color: white;
+  padding: 15px 15px;
+  border-radius: 15px;
 }
 
 .content-container {
@@ -45,6 +85,10 @@ body {
   align-items: baseline;
   font-size: 50px;
   flex-wrap: wrap;
+}
+
+.trending-section {
+  background-color: #f2f4fc;
 }
 
 .text-button-container {
@@ -221,6 +265,41 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease; /* Optional: add transition for a smooth color change */
 }
 
+.button-big {
+  padding: 15px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-family: 'SF Pro Display', sans-serif;  
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
+}
+
+.button-big:hover {
+  background-color: black;
+  color: white;
+}
+
+.button-big-s {
+  padding: 15px;
+  border: 2px solid #635bff;
+  background-color: #635bff;
+  color: white;
+  font-size: 16px;
+  font-family: 'SF Pro Display', sans-serif;  
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
+}
+
+.button-big-s:hover {
+  background-color: #dddbff;
+  color: #635bff;
+}
+
+
 .button-f:hover {
   background-color: black; /* Change to whatever color you want on hover */
   color: #ddd; /* Change the text color on hover if necessary */
@@ -242,7 +321,6 @@ body {
   font-size: 25px;
   margin: 4px 2px;
   cursor: pointer;
-  background-color: white;
   color: black; 
   transition: background-color 0.3s ease, color 0.3s ease; /* Optional: add transition for a smooth color change */
   
@@ -254,6 +332,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -282,7 +361,7 @@ body {
 }
 
 .body {
-  margin-right: 400px;
+  margin-right: 200px;
 }
 
 .card {
@@ -315,6 +394,8 @@ body {
   text-align: center;
   padding: 10px;
 }
+
+
 
 @media screen and (max-width: 1000px) {
   .content-container {

@@ -14,21 +14,18 @@ function App() {
   return (
     <div className="App">
       <Home/>
-      <div style={{marginBottom: 70}}>
+      <div style={{marginBottom: 60}}>
       <ContentComponent/>
       </div>
-      <div style={{marginBottom: 65}}>
+      <TextNearTop />
+      <div style={{marginTop: 60, marginBottom: 80}}>
       <CourseCategories/>
       </div>
-      <div style={{marginBottom: 60}}>
+      <div style={{marginBottom: 65}}>
       <TrendingCourses/>
-      <div style={{marginTop: 60}}>
-
-      <TextNearTop />
+      </div>
       <div style={{marginTop: 60}}>
        <CourseImage/>
-      </div>
-      </div>
       </div>
 
       <div style={{marginTop: 60}}>
