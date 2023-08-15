@@ -21,6 +21,7 @@ const CourseImage = () => {
                 <div className="column-one">
                     <h1 className="header" style={{paddingBottom: 20, fontWeight:'600', fontSize: '18px', color:'white' }}  >• Benifits</h1>
                     <h1 className="body" style={{color: 'white', fontWeight:'800', fontSize: '50px'}}>Software with future design technology introductions and experience.</h1>
+                    <button className="button-big-b">Button 2</button>
                 </div>
 
                 <div className="column-two" style={{justifyContent:'flex-end', display: 'flex'}}>

@@ -6,8 +6,8 @@ const CourseCategories = () => {
     <>
     <div class="filter-wrapper" style={{backgroundColor: 'white', borderRadius:50 }}>
     <h1 className="header" style={{paddingBottom: 20, fontWeight:'600', fontSize: '18px', color:'#635bff' }}  >• Benifits</h1>
-      <h1 className="header" style={{fontWeight:'600', fontSize: '50px'}}>Courses Categories</h1>
-      <p class="body" style={{color:'#425466', marginTop:30, marginBottom: 30, fontSize:18, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <h1 className="header" style={{fontWeight:'900', fontSize: '50px'}}>Courses Categories</h1>
+      <p class="body" style={{fontWeight: 600, color:'#425466', marginTop:30, marginBottom: 30, fontSize:15, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <hr className="line" />
       <div className="button-container-filter">
         <button style={{marginRight: 20}} className="button-big">Category 1</button>

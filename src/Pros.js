@@ -1,7 +1,7 @@
 import React from 'react';
-import backgroundImage from './woman-happy.png';
+import backgroundImage from './collage.png';
 
-const TextNearTop = () => {
+const Pros = () => {
     return (
         <div style={{ 
             
@@ -12,6 +12,13 @@ const TextNearTop = () => {
             backgroundColor: 'white', 
             textAlign: 'left'
         }}>
+
+<div className="column-one" style={{marginLeft: 320, marginRight: 320}}>
+                    <h1 className="header" style={{textAlign: 'center', paddingBottom: 20, fontWeight:'900', fontSize: '15px', color:'#635bff' }}  >BENIFITS</h1>
+                    <h1 className="header" style={{textAlign: 'center',fontWeight:'900', fontSize: '32px'}}  >The currently involved users who are creating the application.</h1>
+                    <p style={{ textAlign: 'center', color:'#425466', fontWeight: 600, marginTop:30, marginBottom: 30, fontSize:15, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+
             <div className="two-sections" style={{display:'flex', alignItems: 'center', justifyContent:'space-between', justifyContent: 'space-around'}}>
                 
 
@@ -30,4 +37,4 @@ const TextNearTop = () => {
     );
 }
 
-export default TextNearTop;
+export default Pros;
