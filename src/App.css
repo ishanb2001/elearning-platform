@@ -3,9 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 body {
-  margin: auto;
-  max-width: 1200px;
-  background-color:white;
+  background-color:#f2f4fc;
   font-family: 'Manrope', sans-serif;
 font-family: 'Plus Jakarta Sans', sans-serif;
   /*font-family: 'Plus Jakarta Sans', sans-serif;*/                                               
@@ -18,12 +16,33 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   align-items: center;
   flex-wrap: wrap;
   padding: 0.3em 2em;
-  border-bottom: 1px solid black;
-  background: black; /* Add black background */
-  border-radius: 15px; /* Add rounded corners */
-  margin-top: 30px;
+  background-color: white; /* Add black background */
   margin-bottom: 10px;
+  position: fixed;  /* Make the navbar fixed */
+    top: 0;           /* Position it at the top of the viewport */
+    left: 0;          /* Align it to the left */
+    right: 0;         /* Ensure it stretches across the entire viewport width */
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for some depth */
+    z-index: 1000;
+    width: 100%; /* Ensures the navbar takes up the full viewport width */
+    border: 1px solid rgb(239, 239, 239);
 }
+
+.navbar-content {
+  max-width: 1200px;  /* Adjust to the desired max-width */
+  display: flex;      /* Line up all items horizontally */
+  margin: auto;
+  width: 100%;
+}
+
+body, .main-content {
+  padding-top: 60px;  /* Adjust based on the height of your navbar */
+}
+
+.search-container, .menu {
+  transition: all 0.3s ease;
+}
+
 
 .logo {
   width: 100px;
@@ -37,6 +56,8 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   width: 60%;
 }
 
+
+
 .menu-button {
   margin: 0.5em;
   padding: 0.8em 1em;
@@ -44,8 +65,12 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   border: 1px solid white; /* Add white border */
   background-color: transparent; /* Remove background */
   cursor: pointer;
-  color: white; /* Set text color to white */
+  color: black; /* Set text color to white */
   transition: 0.3s; /* Add transition for smooth hover effect */
+  font-size: 1rem;
+  font-family:'Manrope', sans-serif;
+  font-weight: 600;
+
 }
 
 .menu-button:hover {
@@ -74,6 +99,51 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   margin-left: 10px;
 }
 
+
+
+
+
+
+
+.navbar {
+    width: 100%;
+    /* ... other navbar styles ... */
+}
+
+.navbar-content {
+    width: 100%; /* This ensures the content takes up the entire width of the navbar */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    /* remove or reduce the padding if it's too much */
+    padding: 0 10px;
+}
+
+.menu-toggle, .search-toggle {
+    margin: 0; /* Remove any default margin */
+}
+
+.right-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    margin-right: 10px; /* Optional spacing between search and search button */
+}
+
+/* ... other styles ... */
+
+
+
+
+
+
+
+
+
+
+
 .search-input {
   border: 1px solid white;
   background: none;
@@ -85,19 +155,22 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 .content-container {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  font-size: 50px;
+  align-items: center;
+  font-size: 30px;
   flex-wrap: wrap;
 }
 
 .trending-section {
-  background-color: #f2f4fc;
+  
 }
 
 .text-button-container {
   flex: 1 ;
   margin-right: 10px;
+    border-Radius: 30px; /* This gives the container rounded corners */
+    position: relative; /* This will be useful for positioning the "BENIFITS" text */
 }
+
 
 .button-container {
   display: flex;
@@ -138,6 +211,64 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   flex: 1;
 }
 
+.box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.box h2 {
+  margin-top: 0;
+}
+
+.box-container {
+  display: flex;
+  padding: 20px;
+}
+
+.box {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box:last-child {
+  margin-bottom: 0;
+}
+
+.main-box {
+  flex: 1.5;
+  margin-right: 20px;
+}
+
+.side-boxes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-boxes .box {
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.side-boxes .box:last-child {
+  margin-bottom: 0;
+}
+
+
+
 
 
 .content-button {
@@ -151,12 +282,31 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .card-container {
-  padding: 40px 0px 0px 0px;
   flex: 0.5 1;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
+.content-container2 {
+  display: flex;
+  width: 100%; /* take full width */
+}
+
+.card-container2 {
+  display: flex;
+  width: 100%; /* take full width */
+  gap: 20px; 
+}
+
+.column-layout {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  flex-grow: 1; /* This allows the column-layout div to grow and take up available space */
+}
+
+
 
 .card-container-trending {
   padding: 40px 0px 0px 0px;
@@ -185,6 +335,7 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   flex-direction: column;
   background-color: white;
   color: black;
+  justify-content: space-between;
   /*box-shadow: 0 0 50px #ccc;*/
 }
 
@@ -196,6 +347,14 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 
 .header {
   text-align: left;
+  font-Weight:900 ;
+  font-Size: 15px; 
+  color:#635bff;
+  border-radius: 40px;
+}
+
+span {
+  color:#635bff;
 }
 
 .line {
@@ -212,8 +371,6 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .button { /* Blue */
-  border: 1px solid white;
-  padding: 10px;
   border-radius: 30px;
   color: white;
   text-align: center;
@@ -222,11 +379,10 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  font-family: 'Manrope', sans-serif;
 }
 
 .button2 { /* Blue */
-  border: 1px solid black;
-  padding: 10px;
   border-radius: 30px;
   color: black;
   text-align: center;
@@ -377,7 +533,72 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 .card-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+}
+
+.course {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  border-radius: 15px;
+  background-color: white;
+}
+
+
+
+.course.hovered {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.course-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.course.hovered .course-img {
+  transform: translateY(-10%);
+}
+
+.content {
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.course.hovered .content {
+  transform: translateY(-10%);
+}
+
+.course-description {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #635bff;
+  font-size: 20px;
+}
+
+.course-link {
+  font-weight: 600;
+  color: #635bff;
+  font-size: 18px;
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  bottom: 0;
+  left: 20px;
+}
+
+.course.hovered .course-link {
+  opacity: 1;
+}
+
+.course-title {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0;
 }
 
 .two-sections {
@@ -385,17 +606,15 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .body {
-  font-Weight: 600;
-  color: '#425466';
-  margin-Top: 30;
-  margin-Bottom: 30;
-  font-Size: 15;
+  font-Weight: 500;
+  color: #425466;
+  margin-Top:10px;
+  font-Size: 16px;
   line-Height: 1.5;
 }
 
 .section {
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .divider {
@@ -404,12 +623,11 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 
-.card {
-  border: 5px solid white;
-  border-radius: 20px;
-  width: 30%;
-  font-size: 30px;
-}
+
+
+
+
+
 
 .container {
   background-color: white;
@@ -422,6 +640,11 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 
 .container h1 {
   text-align: center;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 35px;
 }
 
 .icon-row {

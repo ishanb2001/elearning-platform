@@ -9,7 +9,6 @@ const TextNearTop = () => {
             backgroundSize: 'cover', 
             backgroundRepeat: 'no-repeat',  
             borderRadius: 30, 
-            backgroundColor: 'white', 
             textAlign: 'left'
         }}>
             <div className="two-sections" style={{display:'flex', alignItems: 'center', justifyContent:'space-between', justifyContent: 'space-around'}}>
@@ -20,9 +19,9 @@ const TextNearTop = () => {
                 </div>
 
                 <div className="column-one">
-                    <h1 className="header" style={{paddingBottom: 20, fontWeight:'900', fontSize: '15px', color:'#635bff' }}  >BENIFITS</h1>
-                    <h1 className="header" style={{fontWeight:'900', fontSize: '32px'}}  >The currently involved users who are creating the application.</h1>
-                    <p style={{ color:'#425466', fontWeight: 600, marginTop:30, marginBottom: 30, fontSize:15, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <h1 className="header">BENIFITS</h1>
+                    <h1>The currently involved users who are creating the application.</h1>
+                    <p class="body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <button className="button-big">Button 2</button>
                 </div>
             </div>

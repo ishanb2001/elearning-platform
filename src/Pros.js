@@ -14,8 +14,8 @@ const Pros = () => {
         }}>
 
 <div className="column-one" style={{marginLeft: 320, marginRight: 320}}>
-                    <h1 className="header" style={{textAlign: 'center', paddingBottom: 20, fontWeight:'900', fontSize: '15px', color:'#635bff' }}  >BENIFITS</h1>
-                    <h1 className="header" style={{textAlign: 'center',fontWeight:'900', fontSize: '32px'}}  >The currently involved users who are creating the application.</h1>
+                    <h1 className="header" style={{textAlign: 'center'}}>BENIFITS</h1>
+                    <h1 style={{textAlign: 'center'}}>The currently involved users who are creating the application.</h1>
                     <p style={{ textAlign: 'center', color:'#425466', fontWeight: 600, marginTop:30, marginBottom: 30, fontSize:15, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing</p>
                 </div>
 
@@ -27,8 +27,8 @@ const Pros = () => {
                 </div>
 
                 <div className="column-one">
-                    <h1 className="header" style={{paddingBottom: 20, fontWeight:'900', fontSize: '15px', color:'#635bff' }}  >BENIFITS</h1>
-                    <h1 className="header" style={{fontWeight:'900', fontSize: '32px'}}  >The currently involved users who are creating the application.</h1>
+                    <h1 className="header">BENIFITS</h1>
+                    <h1>The currently involved users who are creating the application.</h1>
                     <p style={{ color:'#425466', fontWeight: 600, marginTop:30, marginBottom: 30, fontSize:15, lineHeight: 1.5}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <button className="button-big">Button 2</button>
                 </div>

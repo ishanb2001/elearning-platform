@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import ContentComponent from './Header';
@@ -9,6 +10,8 @@ import TextNearTop from './Card';
 import CourseImage from './CourseImage';
 import Footer from './Footer';
 import Pros from './Pros';
+import NewPage from './CoursePage';
+import CardComponent from './CardComponent';
 
 function Section({ children }) {
   return (
@@ -20,19 +23,25 @@ function Section({ children }) {
 
 function App() {
   return (
-    <div className="App">
-      <Section><Home/></Section>
-      <Section><ContentComponent/></Section>
-      <Section><TextNearTop /></Section>
-      
-      <hr className="divider" />
-      
-      <Section><Pros/></Section>
-      <Section><CourseCategories/></Section>
-      <Section><TrendingCourses/></Section>
-      <Section><CourseImage/></Section>
-      <Section><Footer/></Section>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<React.Fragment>
+            <Section><Home/></Section>
+            <div class="wrapper" style={{maxWidth: 1200, margin: 'auto'}}>
+            <Section><ContentComponent/></Section>
+            <Section><CourseCategories/></Section>
+            <Section><CardComponent /></Section>
+            <Section><CourseImage/></Section>
+            <Section><TextNearTop /></Section>
+            <Section><Pros/></Section>
+            </div>
+            <Section><Footer/></Section>
+          </React.Fragment>} />
+          <Route path="/newpage" element={<NewPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

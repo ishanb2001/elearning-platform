@@ -15,7 +15,6 @@ const NewPage = () => {
   <div className="card-container-trending">
     <CourseCard title="Product Design" description="Text here" image={editImage} />
     <CourseCard title="Computer Science" description="Text here" image={editImage} />
-    <CourseCard title="Product Design" description="Text here" image={editImage} />
   </div>
 
   <button className="button-big-s" style={{ marginTop: 50 }}>View More Courses →</button>

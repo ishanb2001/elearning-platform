@@ -1,21 +1,22 @@
-// Button.js
 import React from 'react';
-import './App.css';
+import { Link } from 'react-router-dom';
 
-function Button({ text, variant, link, style }) {
-    let className = 'button';
+function Button({ text, link, variant, ...props }) {
+  let className = 'button';
 
-    if (variant === 'big') {
-        className = 'button-big';
-    } else if (variant === 'big-s') {
-        className = 'button-big-s';
-    }
+  if (variant === 'big') {
+      className = 'button-big';
+  } else if (variant === 'big-s') {
+      className = 'button-big-s';
+  }
 
-    return (
-        <a href={link} className={className} style={style}>
-            {text}
-        </a>
-    );
+  return (
+    <Link to={link}>
+      <button className={className} {...props}>
+        {text}
+      </button>
+    </Link>
+  );
 }
 
 export default Button;
