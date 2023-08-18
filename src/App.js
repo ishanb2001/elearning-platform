@@ -30,11 +30,14 @@ function App() {
             <Section><Home/></Section>
             <div class="wrapper" style={{maxWidth: 1200, margin: 'auto'}}>
             <Section><ContentComponent/></Section>
-            <Section><CourseCategories/></Section>
             <Section><CardComponent /></Section>
+            <Section><CourseCategories/></Section>
+            </div>
             <Section><CourseImage/></Section>
+            <div class="wrapper" style={{maxWidth: 1200, margin: 'auto'}}>
             <Section><TextNearTop /></Section>
             <Section><Pros/></Section>
+        
             </div>
             <Section><Footer/></Section>
           </React.Fragment>} />

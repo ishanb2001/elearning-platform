@@ -7,10 +7,10 @@ import Gradient from './gradient.png';
 
 function ContentComponent() {
     return (
-        <div className="content-container">
+        <div className="content-container" style={{marginTop: 100,}}>
             <div className="text-button-container">
                 <h1 className="header">BENIFITS</h1>
-                <h1 style={{ fontSize: 60 }}>Comprehensive <span>Online Platform</span> For Learning</h1>
+                <h1 style={{ fontSize: 60, marginTop: 0 }}>Comprehensive <span>Online Platform</span> For Learning</h1>
                 
                 <div style={{marginBottom: 40}}>
                     <Button variant="big-s" text="JOIN TODAY" link="/path2" />

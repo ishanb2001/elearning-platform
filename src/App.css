@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 body {
-  background-color:#f2f4fc;
+  background-color:white;
   font-family: 'Manrope', sans-serif;
 font-family: 'Plus Jakarta Sans', sans-serif;
   /*font-family: 'Plus Jakarta Sans', sans-serif;*/                                               
@@ -291,12 +291,14 @@ body, .main-content {
 .content-container2 {
   display: flex;
   width: 100%; /* take full width */
+  margin-top: 70px;
 }
 
 .card-container2 {
   display: flex;
   width: 100%; /* take full width */
   gap: 20px; 
+  flex-direction: row-reverse;
 }
 
 .column-layout {
@@ -385,13 +387,14 @@ span {
 .button2 { /* Blue */
   border-radius: 30px;
   color: black;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  /* Removed the display: flex; */
 }
+
 
 /* CourseCategories.css */
 
@@ -425,13 +428,13 @@ span {
 }
 
 .button-big {
-  padding: 15px;
-  border: 2px solid black;
+  padding: 11px;
+  border: 1px solid #e2e2e2;
   background-color: white;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'SF Pro Display', sans-serif;  
-  border-radius: 10px;
+  border-radius: 50px;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
 }
@@ -443,6 +446,7 @@ span {
 
 .button-big-s {
   padding: 15px;
+  margin-top: 30px;
   border: 2px solid #635bff;
   background-color: #635bff;
   color: white;
@@ -540,6 +544,7 @@ span {
   overflow: hidden;
   position: relative;
   transition: box-shadow 0.3s ease;
+  border: 1px solid rgb(217, 217, 217);
   border-radius: 15px;
   background-color: white;
 }
@@ -548,6 +553,7 @@ span {
 
 .course.hovered {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border: 1px solid white;
 }
 
 .course-img {
@@ -597,7 +603,7 @@ span {
 
 .course-title {
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -607,9 +613,9 @@ span {
 
 .body {
   font-Weight: 500;
-  color: #425466;
+  color: #333;
   margin-Top:10px;
-  font-Size: 16px;
+  font-Size: 14px;
   line-Height: 1.5;
 }
 
