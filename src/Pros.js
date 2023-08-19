@@ -3,7 +3,7 @@ import backgroundImage from './collage.png';
 
 const Pros = () => {
     return (
-        <div style={{ 
+        <div class="pros" style={{ 
             
             backgroundPosition: 'center', 
             backgroundSize: 'cover', 

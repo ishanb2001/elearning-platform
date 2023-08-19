@@ -3,6 +3,7 @@ import './App.css';
 import CourseCard from './CourseCard';
 import editImage from './video-editing.jpg';
 import anotherImage from './outerspace.png'; // Just added this for demonstration purposes.
+import { Link } from 'react-router-dom';
 
 const CourseCategories = () => {
   return (
@@ -27,7 +28,9 @@ const CourseCategories = () => {
       </div>
 
       <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
-        <button className="button-big-s">View More Courses →</button>
+        <Link to="/CoursePage" className="button-big-s" style={{textDecoration: 'none'}}>
+        View More Courses →
+      </Link>
       </div>
     </div>
     </>

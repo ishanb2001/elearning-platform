@@ -3,6 +3,7 @@ import './App.css';
 import CourseCard from './CourseCard';
 import editImage from './video-editing.jpg';
 import anotherImage from './outerspace.png'; // Let's say you have another image for demonstration purposes.
+import { Link } from 'react-router-dom';
 
 const TrendingCourses = () => {
   return (
@@ -27,7 +28,13 @@ const TrendingCourses = () => {
         <CourseCard title="Computer Science" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
       </div>
 
-      <button className="button-big-s" style={{ marginTop: 50 }}>View More Courses →</button>
+      <Link to="/CoursePage" className="button-big-s" style={{marginTop: 80}}>
+        View More Courses →
+      </Link>
+
+
+
+
     </div>
   );
 };

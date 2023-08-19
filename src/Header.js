@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Button from './Button';
 import Cards from './Cards';
-import backgroundImage from './outerspace.png';
+import backgroundImage from './woman-smiling.png';
 import Gradient from './gradient.png';
 
 function ContentComponent() {
@@ -10,10 +10,10 @@ function ContentComponent() {
         <div className="content-container" style={{marginTop: 100,}}>
             <div className="text-button-container">
                 <h1 className="header">BENIFITS</h1>
-                <h1 style={{ fontSize: 60, marginTop: 0 }}>Comprehensive <span>Online Platform</span> For Learning</h1>
+                <h1 style={{ fontSize: 65, marginTop: 0 }}>Comprehensive <span>Online Platform</span> For Learning</h1>
                 
-                <div style={{marginBottom: 40}}>
-                    <Button variant="big-s" text="JOIN TODAY" link="/path2" />
+                <div style={{marginBottom: 40, marginTop: 0}}>
+                    <button className="button-big-cta">Join The Community</button>
                     
                 </div> 
 
@@ -34,18 +34,17 @@ function ContentComponent() {
             </div>
             
             <div className="card-container">
-                <Cards 
-
-                    bgColor="rgb(99, 91, 255)" 
+                <Cards index={0}
+                    backgroundImage={backgroundImage}
+                    bgColor="#ec6a41" 
                     textColor="white" 
                     fontSize="20px"
                 >
                     <div className="button" style={{ fontWeight: 900, textAlign: 'left', color: 'white' }}>HEADER</div>
                     <h2 style={{ marginBottom: 0, marginTop: 100 }}>Easily Track Your Progress</h2>
                 </Cards>
-                <Cards 
-                    backgroundImage={backgroundImage}
-                    bgColor="black" 
+                <Cards index={1}
+                    bgColor="rgb(109, 55, 255)" 
                     textColor="white" 
                     fontSize="20px"
                 >

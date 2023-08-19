@@ -2,23 +2,53 @@ import React from 'react';
 import './App.css';
 import CourseCard from './CourseCard';
 import editImage from './video-editing.jpg';
-import anotherImage from './outerspace.png'; // Let's say you have another image for demonstration purposes.
+import outerspaceImage from './outerspace.png'; // Just added this for demonstration purposes.
+import { Link } from 'react-router-dom';
+import Home from './Home';
+import CourseImage from './CourseImage';
 
-const NewPage = () => {
-  return <div className="trending-section" style={{ textAlign: 'center', borderRadius: 20, padding: 60 }}>
-  <h1 className="header" style={{ textAlign: 'center', paddingBottom: 20, fontWeight: '600', fontSize: '18px', color: '#635bff' }}>TRENDING</h1>
-  
-  <div className="header-container">
-    <h1 className="header" style={{ paddingBottom: 20, paddingLeft: 100, paddingRight: 100, textAlign: 'center', fontWeight: '900', fontSize: '40px', color: 'black' }}>Meet the crew of people who create with passion and love for modern trends.</h1>
-  </div>
 
-  <div className="card-container-trending">
-    <CourseCard title="Product Design" description="Text here" image={editImage} />
-    <CourseCard title="Computer Science" description="Text here" image={editImage} />
-  </div>
+function CoursePage() {
+  return (
+    <>
+    <Home />
+    <CourseImage 
+            text="All the latest and
+            important information"
+            bgColor="#635bff"
+            bodyFontSize='70px'
+        />
+    <div className="filter-wrapper" style={{ marginTop: 100, marginBottom: 100, borderRadius:30, backgroundColor: 'white', maxWidth: 1200, margin: 'auto'}}>
+      
 
-  <button className="button-big-s" style={{ marginTop: 50 }}>View More Courses →</button>
-</div>;
+
+      <div className="card-container-trending">
+        <CourseCard title="Product Design" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+        <CourseCard title="Computer Science" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+        <CourseCard title="Computer Science" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+      </div>
+
+      <div className="card-container-trending">
+        <CourseCard title="Product Design" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+        <CourseCard title="Computer Science" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+        <CourseCard title="Computer Science" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+      </div>
+
+      <div className="card-container-trending">
+        <CourseCard title="Product Design" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+        <CourseCard title="Computer Science" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+        <CourseCard title="Computer Science" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." image={editImage} />
+      </div>
+
+      <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
+        <Link to="/CoursePage" className="button-big-s" style={{textDecoration: 'none'}}>
+        View More Courses →
+      </Link>
+      </div>
+    </div>
+    </>
+  );
 };
 
-export default NewPage;
+
+export default CoursePage;

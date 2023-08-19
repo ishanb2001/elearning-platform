@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Button({ text, link, variant, ...props }) {
+function Button({ backgroundColor, text, link, variant, ...props }) {
   let className = 'button';
 
   if (variant === 'big') {
