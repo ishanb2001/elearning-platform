@@ -16,7 +16,7 @@ function Home() {
                 
                 <div className="right-container">
                     <div className={`search-container ${searchOpen ? 'open' : ''}`}>
-                        <input type="text" style={{ marginLeft: 40, backgroundColor: '#f2f4fc' }} placeholder="Search.." className="search-input" />
+                        <input type="text" style={{ marginLeft: 40, backgroundColor: '#f2f4fc' }} placeholder="Search For a Course" className="search-input" />
                     </div>
                     <button className="search-toggle" onClick={() => setSearchOpen(!searchOpen)}>
                         🔍
@@ -27,7 +27,7 @@ function Home() {
                     <button className="menu-button">Home</button>
                     <button className="menu-button">About</button>
                     <button className="menu-button">Contact</button>
-                    <button className="menu-button">Contact</button>
+                    <button className="button-big-cta">Sign Up</button>
                 </div>
             </div>
         </nav>

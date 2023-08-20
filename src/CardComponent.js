@@ -6,6 +6,7 @@ import backgroundImage from './outerspace.png';
 import Gradient from './gradient.png';
 import StudentOne from './student.jpg';
 import LightG from './light-gradient.jpg';
+import Label from './Label';
 
 
 function CardComponent() {
@@ -31,7 +32,7 @@ function CardComponent() {
                       textColor="white" 
                       fontSize="25px"
                   >
-                      <div className="button2" style={{ fontWeight: 600, textAlign: 'left', color: 'white' }}>HEADER</div>
+                      <Label buttonBgColor="rgba(255, 255, 255, 0.1)" buttonText="EXPLORE NOW" />
                       <h2 style={{ fontWeight: 600, marginBottom: 0, marginTop: 100 }}>120+ Courses</h2>
                   </Cards>
 
@@ -41,7 +42,7 @@ function CardComponent() {
                       textColor="white" 
                       fontSize="25px"
                   >
-                      <div className="button" style={{fontWeight: 600, textAlign: 'left', color: 'white' }}>Forum</div>
+                      <Label buttonBgColor="rgba(255, 255, 255, 0.1)" buttonText="EXPLORE NOW"/>
                       <h2 style={{ fontWeight: 600, marginBottom: 0, marginTop: 100 }}>Join Our Community</h2>
                   </Cards>
                 </div>

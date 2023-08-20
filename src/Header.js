@@ -4,6 +4,7 @@ import Button from './Button';
 import Cards from './Cards';
 import backgroundImage from './woman-smiling.png';
 import Gradient from './gradient.png';
+import Label from './Label';
 
 function ContentComponent() {
     return (
@@ -40,7 +41,7 @@ function ContentComponent() {
                     textColor="white" 
                     fontSize="20px"
                 >
-                    <div className="button" style={{ fontWeight: 900, textAlign: 'left', color: 'white' }}>HEADER</div>
+                    <Label buttonBgColor="white" buttonTextColor="black" buttonText="TRACKING"/>
                     <h2 style={{ marginBottom: 0, marginTop: 100 }}>Easily Track Your Progress</h2>
                 </Cards>
                 <Cards index={1}
@@ -48,7 +49,7 @@ function ContentComponent() {
                     textColor="white" 
                     fontSize="20px"
                 >
-                    <div className="button2" style={{ fontWeight: 900,textAlign: 'left', color: 'white' }}>HEADER</div>
+                    <Label buttonBgColor="rgba(255, 255, 255, 0.1)" buttonText="EXPLORE NOW"/>
                     <h2 style={{ marginBottom: 0, marginTop: 100 }}>120+ Courses</h2>
                 </Cards>
             </div>
