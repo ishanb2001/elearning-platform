@@ -42,7 +42,7 @@ function App() {
                 <Section><CourseCategories /></Section>
               </div>
               <Section><CourseImage /></Section>
-              <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
+              <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto', marginBottom: 100 }}>
                 <Section><TextNearTop /></Section>
                 <Section><Pros /></Section>
               </div>

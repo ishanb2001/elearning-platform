@@ -12,7 +12,7 @@ const CourseCard = ({ title, description, image }) => {
     >
       <img className="course-img" src={image} alt={title} />
       <div className="content" style={{marginBottom: 0}}>
-        <h4 class="course-title" style={{marginBottom: 0, paddingBottom: 0}}>{title}</h4>
+        <h4 class="course-title" style={{marginBottom: 0, paddingBottom: 0, fontWeight: 900}}>{title}</h4>
         <p className="body">{description}</p>
         <h5 className="course-link">Text here →</h5>
       </div>

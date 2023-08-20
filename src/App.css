@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Manrope', sans-serif;
 }
 
 .App {
@@ -41,7 +42,6 @@ html {
 body {
   background-color:white;
   font-family: 'Manrope', sans-serif;
-font-family: 'Plus Jakarta Sans', sans-serif;
   /*font-family: 'Plus Jakarta Sans', sans-serif;*/                                               
   color: black;
 }
@@ -435,7 +435,7 @@ body, .main-content {
 }
 
 .course-img {
-  border-radius: 12px;
+  border-radius: 12px 0px 0px;
 }
 
 /* CourseCategories.css */
@@ -461,7 +461,6 @@ span {
 .button-container-filter {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
   flex-wrap: wrap;
 }
 
@@ -722,16 +721,21 @@ span {
   flex-direction: row;
 }
 
+h2 {
+  letter-spacing: -0.05em;
+}
+
+h1 {
+  letter-spacing: -0.05em;
+}
+
 .body {
   font-Weight: 500;
   color: #333;
   margin-Top:10px;
   font-Size: 14px;
-  line-Height: 1.5;
-}
-
-.section {
-  margin-bottom: 40px;
+  line-Height: 1.2;
+  letter-spacing: -0.05em;
 }
 
 .divider {
@@ -739,6 +743,11 @@ span {
   margin-Bottom: '20px';
 }
 
+/* FilterSidebar.css */
+.sidebar {
+  width: 180px;
+  padding: 10px;
+}
 
 
 
@@ -775,19 +784,45 @@ h1 {
   padding: 10px;
 }
 
+.footer {
+  background-color: #f6f9fc;
+  padding: 50px 0;
+  font-size: 14px;
+}
+
 .footer-container {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 30px;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
 .footer-section {
-  flex: 1; /* Divides the space equally among the three sections */
-  padding: 10px;
-  text-align: center;
+  flex: 1;
+  padding: 0 20px;
 }
+
+.footer-section h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
 
 /* Add any other specific styles for individual sections if needed */
 

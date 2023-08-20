@@ -10,7 +10,7 @@ function ContentComponent() {
         <div className="content-container" style={{marginTop: 100,}}>
             <div className="text-button-container">
                 <h1 className="header">BENIFITS</h1>
-                <h1 style={{ fontSize: 65, marginTop: 0 }}>Comprehensive <span>Online Platform</span> For Learning</h1>
+                <h1 style={{ fontSize: 65, marginTop: 0, letterSpacing: '-0.05em' }}>Comprehensive <span>Online Platform</span> For Learning</h1>
                 
                 <div style={{marginBottom: 40, marginTop: 0}}>
                     <button className="button-big-cta">Join The Community</button>
