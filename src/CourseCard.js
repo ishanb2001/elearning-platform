@@ -7,9 +7,9 @@ const CourseCard = ({
     buttonText, 
     buttonBgColor, 
     buttonTextColor,
-    cardWidth = '100%'  // Default width if not provided
+    cardWidth = '350px'  // Default width if not provided
 }) => {
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState(false); 
 
   const buttonStyle = {
     backgroundColor: buttonBgColor || 'grey', // default to grey if no prop

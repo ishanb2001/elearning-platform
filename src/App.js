@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AOS from 'aos';   // Import AOS
-import 'aos/dist/aos.css';  // Import AOS CSS
 import './App.css';
 import Home from './Home';
 import ContentComponent from './Header';
@@ -23,12 +21,6 @@ function Section({ children }) {
 }
 
 function App() {
-  React.useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
-  }, []);
-
   return (
     <Router>
       <div className="App">
@@ -42,7 +34,7 @@ function App() {
                 <Section><CourseCategories /></Section>
               </div>
               <Section><CourseImage /></Section>
-              <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto', marginBottom: 100 }}>
+              <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
                 <Section><TextNearTop /></Section>
                 <Section><Pros /></Section>
               </div>
