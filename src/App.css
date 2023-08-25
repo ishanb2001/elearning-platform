@@ -41,11 +41,17 @@ html {
 }
 
 body {
-  background-color:white;
+  background-color: white;
   font-family: 'Manrope', sans-serif;
-  /*font-family: 'Plus Jakarta Sans', sans-serif;*/                                               
   color: black;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
+
+body.fade-out {
+  opacity: 0;
+}
+
 
 .content-container::before {
   content: "";
@@ -432,6 +438,36 @@ input:focus {
   transition: transform 0.3s ease-in-out; /* Adds smoothness to the scaling effect */
   /*box-shadow: 0 0 50px #ccc;*/
 }
+
+.categories-container {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;  
+  left: 0;   
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 100;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  width: 100%;  
+}
+
+.dropdown.open {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.menu-button {
+  display: block;
+  /* ... any other styles ... */
+}
+
 
 .card:hover {
   transition: transform 0.3s ease-in-out; /* Adds smoothness to the scaling effect */

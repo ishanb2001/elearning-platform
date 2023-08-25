@@ -11,6 +11,9 @@ import Pros from './Pros';
 import CardComponent from './CardComponent';
 import CoursePage from './CoursePage';
 import TextNearTop from './Card';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 
 function Section({ children }) {
   return (
@@ -21,6 +24,17 @@ function Section({ children }) {
 }
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Fade out effect when route changes
+    document.body.classList.add('fade-out');
+
+    // Fade in effect once the route change is completed
+    setTimeout(() => {
+      document.body.classList.remove('fade-out');
+    }, 500);
+  }, [location]);
   return (
     <Router>
       <div className="App">

@@ -5,6 +5,7 @@ import Logo from './Logo.png';
 function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);  // State for dropdown
 
     return (
         <nav className="navbar">
@@ -14,10 +15,23 @@ function Home() {
                 </button>
                 <img src={Logo} style={{ width: 40 }} alt="Logo" />
                 
+                {/* Categories Button & Dropdown */}
+                <div className="categories-container" 
+                     onMouseEnter={() => setDropdownOpen(true)} 
+                     onMouseLeave={() => setDropdownOpen(false)}>
+                    <button className="menu-button">Categories</button>
+                    <div className={`dropdown ${dropdownOpen ? 'open' : ''}`}>
+                        <button className="menu-button">Option 1</button>
+                        <button className="menu-button">Option 2</button>
+                        <button className="menu-button">Option 3</button>
+                    </div>
+                </div>
+
                 <div className="right-container">
                     <div className={`search-container ${searchOpen ? 'open' : ''}`}>
                         <input type="text" style={{ marginLeft: 40, backgroundColor: '#f2f4fc' }} placeholder="Search For a Course" className="search-input" />
                     </div>
+
                     <button className="search-toggle" onClick={() => setSearchOpen(!searchOpen)}>
                         🔍
                     </button>
