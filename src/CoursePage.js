@@ -4,6 +4,7 @@ import CourseCard from './CourseCard';
 import editImage from './video-editing.jpg'; 
 import Home from './Home';
 import CourseImage from './CourseImage';
+import FadeInWrapper from './FadeInWrapper';
 import Footer from './Footer';
 
 function CoursePage() {
@@ -41,6 +42,7 @@ function CoursePage() {
 
   return (
     <div>
+      <FadeInWrapper>
       <Home />
       <CourseImage 
           text="All the latest and important information"
@@ -58,23 +60,27 @@ function CoursePage() {
         <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('B')}>B</button>
       </div>
       
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'flex-start' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'flex-start' }}>
     {items.map((item) => (
         (filter === 'all' || filter === item.category) && 
-        <CourseCard 
-            key={item.id} 
-            title={`Title ${item.content}`} 
-            description={item.description} 
-            image={item.image} 
-            buttonText={item.buttonText} // Passing buttonText
-            buttonBgColor={item.buttonBgColor} // Passing buttonBgColor
-            buttonTextColor={item.buttonTextColor} // Passing buttonTextColor
-        />
+        <FadeInWrapper key={item.id}>
+            <CourseCard 
+                title={`Title ${item.content}`} 
+                description={item.description} 
+                image={item.image} 
+                buttonText={item.buttonText} // Passing buttonText
+                buttonBgColor={item.buttonBgColor} // Passing buttonBgColor
+                buttonTextColor={item.buttonTextColor} // Passing buttonTextColor
+            />
+        </FadeInWrapper>
     ))}
 </div>
+
       </div>
       <Footer/>
+      </FadeInWrapper>
     </div>
+    
   );
 }
 
