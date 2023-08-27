@@ -12,8 +12,7 @@ import CardComponent from './CardComponent';
 import CoursePage from './CoursePage';
 import TextNearTop from './Card';
 import FadeInWrapper from './FadeInWrapper';
-import { useEffect } from 'react';
-
+import CourseLanding from './CourseLanding';
 
 function Section({ children }) {
   return (
@@ -31,11 +30,11 @@ function App() {
           <Route path="/" element={
             <React.Fragment>
               <FadeInWrapper>
-              <Section><Home /></Section>
+                <Section><Home /></Section>
               </FadeInWrapper>
               <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
-              <FadeInWrapper>
-                <Section><ContentComponent /></Section>
+                <FadeInWrapper>
+                  <Section><ContentComponent /></Section>
                 </FadeInWrapper>
                 <Section><CardComponent /></Section>
                 <Section><CourseCategories /></Section>
@@ -49,6 +48,9 @@ function App() {
             </React.Fragment>
           } />
           <Route path="/CoursePage" element={<CoursePage />} />
+          <Route path="/course/:courseId" element={<CourseLanding />} />
+          {/* The above line ensures that for any URL of the form /course/5, 
+               the CourseLanding component will be displayed. */}
         </Routes>
       </div>
     </Router>

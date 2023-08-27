@@ -7,6 +7,7 @@ import Gradient from './gradient.png';
 import StudentOne from './student.jpg';
 import LightG from './light-gradient.jpg';
 import Label from './Label';
+import videoFile from './video.mp4';
 
 
 function CardComponent() {
@@ -22,7 +23,7 @@ function CardComponent() {
                     fontSize="30px"
                 >
                     <div className="button" style={{ padding: 10, textAlign: 'center', borderRadius:100, marginRight: 500, backgroundColor: 'white', fontWeight: 600, color: 'black', fontSize: 25 }}>▶︎</div>
-                    <h2 style={{ fontWeight: 600, marginBottom: 0, marginTop: 100 }}>Introduction to Corporate Finance</h2>
+                    <h2 style={{ fontWeight: 600, marginBottom: 0, marginTop: 350 }}>Introduction to Corporate Finance</h2>
                 </Cards>
 
                 <div className="column-layout"> 

@@ -25,6 +25,13 @@ html {
   align-items: flex-start;
 }
 
+.card {
+  /* other styles... */
+  position: relative;
+  overflow: hidden;
+}
+
+
 .card.fade-in {
   opacity: 1;
 }
@@ -84,6 +91,17 @@ body {
   /* other styles... */
 }
 
+.video-background {
+  opacity: 0; /* Make video transparent by default */
+  transition: opacity 0.5s ease-in-out; /* Transition effect */
+}
+
+.card:hover .video-background {
+  opacity: 1; /* Make video visible on hover */
+}
+
+
+
 
 
 
@@ -107,7 +125,7 @@ body {
 }
 
 .navbar-content {
-  max-width: 1200px;  /* Adjust to the desired max-width */
+  max-width: 1300px;  /* Adjust to the desired max-width */
   display: flex;      /* Line up all items horizontally */
   margin: auto;
   width: 100%;
@@ -137,8 +155,8 @@ body, .main-content {
 
 
 .menu-button {
-  margin: 0.5em;
-  padding: 5px 15px 5px;
+  margin-left: 1em;
+  margin-right: 1em;
   border-radius: 50px; /* Adjust rounded corners */
   border: 1px solid white; /* Add white border */
   background-color: transparent; /* Remove background */
@@ -146,7 +164,6 @@ body, .main-content {
   color: black; /* Set text color to white */
   transition: 0.3s; /* Add transition for smooth hover effect */
   font-size: 1rem;
-  font-family:'Manrope', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
 
@@ -241,20 +258,16 @@ body, .main-content {
 
 
 
-
-
-
-
-
-
-
-
 .search-input {
-  border: 1px solid white;
+  border: 2px solid black;
   background: none;
   color: white;
   padding: 15px 15px;
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+.search-input:focus {
+  border: 3px solid #6d37ff;
 }
 
 .content-container {
@@ -475,6 +488,8 @@ input:focus {
 
 .menu-button {
   display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
   /* ... any other styles ... */
 }
 
@@ -548,7 +563,7 @@ span {
 .button-container-filter {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
+  padding-bottom: 30px;
   justify-content: flex-start;
 }
 
@@ -588,14 +603,13 @@ span {
 
 .button-big-s {
   padding: 15px;
-  margin-top: 30px;
   border: 2px solid #635bff;
   background-color: #635bff;
   color: white;
   font-size: 16px;
-  font-family: 'SF Pro Display', sans-serif;  
+  font-family: 'Manrope', sans-serif; 
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 800;
   transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
+import VideoComponent from './VideoComponent'; // Assuming you have this component
 
 const CourseImage = ({
+    videoUrl,
     backgroundImg,
     background, // For plain color background
     gradient, // New prop for setting a gradient background
@@ -33,7 +35,16 @@ const CourseImage = ({
             textAlign: 'left',
             justifyContent: 'flex-start',
         }}>
-            <div className="two-sections" style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', maxWidth: 1200, margin:'auto'}}>
+            {videoUrl && <VideoComponent videoUrl={videoUrl} />}  {/* Render video if videoUrl is present */}
+            <div className="two-sections" style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+                maxWidth: 1200,
+                margin: 'auto',
+                position: 'relative', // This is important for z-index to take effect
+                zIndex: 1  // This ensures the content stays on top of the video
+            }}>
                 <div className="column-one">
                     <h1 className="header" style={{paddingBottom: 20, fontWeight:'600', fontSize: '15px', color:'white'}}>{headerText}</h1>
                     <h1 className="body" style={{color: 'white', fontWeight:'700', fontSize: bodyFontSize}}>{text}</h1>

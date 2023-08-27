@@ -13,7 +13,7 @@ function Home() {
                 <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
                     ☰
                 </button>
-                <img src={Logo} style={{ width: 40 }} alt="Logo" />
+                <img src={Logo} style={{ width: 210, paddingRight: 30 }} alt="Logo" />
                 
                 {/* Categories Button & Dropdown */}
                 <div className="categories-container" 
@@ -29,7 +29,7 @@ function Home() {
 
                 <div className="right-container">
                     <div className={`search-container ${searchOpen ? 'open' : ''}`}>
-                        <input type="text" style={{ marginLeft: 40, backgroundColor: '#f2f4fc' }} placeholder="Search For a Course" className="search-input" />
+                        <input type="text" style={{ marginLeft: 40 }} placeholder="Search For a Course" className="search-input" />
                     </div>
 
                     <button className="search-toggle" onClick={() => setSearchOpen(!searchOpen)}>
@@ -40,8 +40,8 @@ function Home() {
                 <div className={`menu ${menuOpen ? 'open' : ''}`}>
                     <button className="menu-button">Home</button>
                     <button className="menu-button">About</button>
-                    <button className="menu-button">Contact</button>
-                    <button className="button-big-cta">Sign Up</button>
+                    <button style={{marginRight: 30}} className="menu-button">Contact</button>
+                    <button className="button-big-cta" style={{fontSize: '14px'}}>Sign Up</button>
                 </div>
             </div>
         </nav>

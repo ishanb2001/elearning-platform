@@ -6,6 +6,16 @@ import Home from './Home';
 import CourseImage from './CourseImage';
 import FadeInWrapper from './FadeInWrapper';
 import Footer from './Footer';
+import SoftwareDev from './software-dev.png'; 
+import WomanImageComputer from './woman-computer.png'; 
+import AsianWoman from './asian-woman.png'; 
+import StudentOne from './student-one.jpg'; 
+import ManPhone from './man-phone.png'; 
+import DataAnalyst from './data-analyst.png'; 
+import ManThinking from './man-thinking.png'; 
+import BrainStorming from './brainstorming.png'; 
+import { Link } from 'react-router-dom';
+
 
 function CoursePage() {
   const [filter, setFilter] = useState('all');
@@ -15,7 +25,7 @@ function CoursePage() {
       id: 1, 
       category: 'A', 
       content: '1',
-      image: editImage,
+      image: BrainStorming,
       description: 'This is the description for item 1',
       buttonText: 'Button 1',
       buttonBgColor: 'red',
@@ -25,17 +35,57 @@ function CoursePage() {
       id: 2, 
       category: 'A', 
       content: '2',
-      image: editImage,
+      image: AsianWoman,
       description: 'This is the description for item 2',
       buttonText: 'Button 2',
       buttonBgColor: 'blue',
       buttonTextColor: 'yellow'
     },
-    { id: 3, category: 'B', content: '3' },
-    { id: 5, category: 'B', content: '4' },
-    { id: 6, category: 'A', content: '5' },
-    { id: 7, category: 'B', content: '6' },
-    { id: 8, category: 'B', content: '7' }
+    { id: 3, 
+    image: SoftwareDev,
+    category: 'B', 
+    content: '3',
+    description: 'This is the description for item 2',
+      buttonText: 'Button 2',
+      buttonBgColor: 'blue',
+      buttonTextColor: 'yellow'
+  },
+
+    { id: 5,
+      category: 'B',
+      content: '4',
+      description: 'This is the description for item 2',
+      buttonText: 'Button 2',
+      buttonBgColor: 'blue',
+      buttonTextColor: 'yellow',
+      image: StudentOne,
+},
+
+    { id: 6,
+      category: 'A',
+      content: '5',
+      buttonText: 'Button 2',
+      buttonBgColor: 'blue',
+      buttonTextColor: 'yellow',
+      image: ManThinking,
+    },
+
+    { id: 7,
+      category: 'B',
+      content: '6',
+      buttonText: 'Button 2',
+      buttonBgColor: 'blue',
+      buttonTextColor: 'yellow',
+      image: DataAnalyst,
+     },
+    { id: 8,
+      category: 'B',
+      content: '7',
+      buttonText: 'Button 2',
+      buttonBgColor: 'blue',
+      buttonTextColor: 'yellow',
+      image: ManPhone,
+     }
   ];
 
   const filteredItems = filter === 'all' ? items : items.filter(item => item.category === filter);
@@ -43,44 +93,42 @@ function CoursePage() {
   return (
     <div>
       <FadeInWrapper>
-      <Home />
-      <CourseImage 
+        <Home />
+        <CourseImage 
           text="All the latest and important information"
           bgColor="#635bff"
           bodyFontSize='80px'
           gradient="linear-gradient(135deg, #4135ef, #6535ef)"
           headerText='BLOG'
-      />
+        />
 
-      <div className="filter-wrapper" style={{paddingTop: 50, marginBottom: 100, borderRadius:30, backgroundColor: 'white', maxWidth: 1200, margin: 'auto'}}>
-      
-      <div className="button-container-filter" style={{ marginBottom: 20 }}>
-        <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('all')}>All</button>
-        <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('A')}>A</button>
-        <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('B')}>B</button>
-      </div>
-      
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'flex-start' }}>
-    {items.map((item) => (
-        (filter === 'all' || filter === item.category) && 
-        <FadeInWrapper key={item.id}>
-            <CourseCard 
-                title={`Title ${item.content}`} 
-                description={item.description} 
-                image={item.image} 
-                buttonText={item.buttonText} // Passing buttonText
-                buttonBgColor={item.buttonBgColor} // Passing buttonBgColor
-                buttonTextColor={item.buttonTextColor} // Passing buttonTextColor
-            />
-        </FadeInWrapper>
-    ))}
-</div>
-
-      </div>
-      <Footer/>
+        <div className="filter-wrapper" style={{paddingTop: 50, marginBottom: 100, borderRadius:30, backgroundColor: 'white', maxWidth: 1200, margin: 'auto'}}>
+          <div className="button-container-filter" style={{ marginBottom: 20 }}>
+            <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('all')}>All</button>
+            <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('A')}>A</button>
+            <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('B')}>B</button>
+          </div>
+        
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'flex-start' }}>
+            {filteredItems.map((item) => (
+              <Link to={`/course/${item.id}`} key={item.id}>
+                <FadeInWrapper>
+                  <CourseCard 
+                    title={`Title ${item.content}`} 
+                    description={item.description} 
+                    image={item.image} 
+                    buttonText={item.buttonText}
+                    buttonBgColor={item.buttonBgColor}
+                    buttonTextColor={item.buttonTextColor}
+                  />
+                </FadeInWrapper>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <Footer/>
       </FadeInWrapper>
     </div>
-    
   );
 }
 
