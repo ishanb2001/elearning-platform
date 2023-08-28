@@ -15,6 +15,7 @@ import DataAnalyst from './data-analyst.png';
 import ManThinking from './man-thinking.png'; 
 import BrainStorming from './brainstorming.png'; 
 import { Link } from 'react-router-dom';
+import videoFile from './video.mp4';
 
 
 function CoursePage() {
