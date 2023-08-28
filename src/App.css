@@ -92,15 +92,13 @@ body {
 }
 
 .course-body-title {
-  margin-top: 80px; /* slightly more than the navbar height to give some space */
-  font-size: 25px;
+  font-size: 14px;
   font-weight: 700;
   
 }
 
 .course-body {
-  font-size: 15px;
-  margin-bottom: 80px; /* slightly more than the navbar height to give some space */
+  font-size: 14px;
 }
 
 .video-background {
@@ -179,6 +177,10 @@ body, .main-content {
   font-weight: 600;
   font-size: 1.1rem;
 
+}
+
+.benifits {
+  border: 1px solid #e2e2e2;
 }
 
 /* All menu buttons by default will have a hover effect with a sliding underline */

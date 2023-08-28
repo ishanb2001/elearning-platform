@@ -62,7 +62,9 @@ const CourseImage = ({
                 maxWidth: 1200,
                 margin: 'auto',
                 position: 'relative', 
-                zIndex: 2
+                zIndex: 2,
+                alignItems: 'center',
+                height: 500,
             }}>
                 <div className="column-one">
                     <h1 className="header" style={{paddingBottom: 20, fontWeight:'600', fontSize: '15px', color:'white'}}>{headerText}</h1>
