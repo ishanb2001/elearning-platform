@@ -6,6 +6,7 @@ import CourseImage from './CourseImage';
 import coursesData from './coursesData';
 import Footer from './Footer';
 import CourseInsight from './CourseInsight';
+import CardComponent from './CardComponent';
 
 function CourseLanding() {
     const { courseId } = useParams();
@@ -16,7 +17,6 @@ function CourseLanding() {
     return (
         <FadeInWrapper> {/* Start of fade-in effect */}
         <div>
-        <div className="wrapper clearfix">
 
                 <Home />
                 {<CourseImage 
@@ -26,11 +26,12 @@ function CourseLanding() {
                     /*bgColor="#635bff"*/
                     videoUrl={course.videoUrl} 
                     // Assuming course has videoUrl property. Adjust if needed.
-    /> }
+    /> }        <div style={{maxWidth: 1200, margin: 'auto' }}>
                 <CourseInsight/>
+                
+                </div>
                 </div>
                 <Footer></Footer>
-                </div>
         </FadeInWrapper>
     );
 }

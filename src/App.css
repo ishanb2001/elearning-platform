@@ -159,8 +159,17 @@ body, .main-content {
 }
 
 .search-input {
-  width: 60%;
+  width: 50%;
+  transition: width 0.3s ease-in-out; /* This line makes the width change smooth */
 }
+
+.search-input:focus {
+  width: 70%;
+  outline: none; /* Optionally remove the default browser outline on focus */
+}
+
+
+
 
 
 
@@ -503,7 +512,7 @@ input:focus {
 .menu-button {
   display: block;
   font-family: 'Manrope', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   /* ... any other styles ... */
 }
 

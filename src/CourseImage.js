@@ -11,12 +11,11 @@ const CourseImage = ({
     bodyFontSize = '50px',
     bgColor = 'white'
 }) => {
-    // If there's a video URL, we render the video as the background. 
-    // Else, we use the other background props (gradient, image, plain color).
+
     const renderBackground = () => {
         if (videoUrl) {
             return (
-                <VideoComponent videoUrl={videoUrl} />
+                <VideoComponent videoUrl={videoUrl} style={{ width: '100%', height: 'auto' }} />
             );
         }
 
@@ -41,7 +40,7 @@ const CourseImage = ({
                 backgroundSize: 'cover', 
                 backgroundRepeat: 'no-repeat', 
                 backgroundColor: bgColor,
-                zIndex: 1
+                zIndex: 1,
             }} />
         );
     };
@@ -64,7 +63,8 @@ const CourseImage = ({
                 position: 'relative', 
                 zIndex: 2,
                 alignItems: 'center',
-                height: 500,
+                marginBottom: 140,
+                marginTop: 140,
             }}>
                 <div className="column-one">
                     <h1 className="header" style={{paddingBottom: 20, fontWeight:'600', fontSize: '15px', color:'white'}}>{headerText}</h1>
