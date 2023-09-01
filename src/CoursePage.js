@@ -16,10 +16,14 @@ import ManThinking from './man-thinking.png';
 import BrainStorming from './brainstorming.png'; 
 import { Link } from 'react-router-dom';
 import videoFile from './video.mp4';
+import { useLocation } from 'react-router-dom';  // Note the addition of useLocation
 
 
 function CoursePage() {
   const [filter, setFilter] = useState('all');
+  const location = useLocation();  // Added this line
+  const searchParams = new URLSearchParams(location.search);  // Added this line
+  const searchQuery = searchParams.get("search") || '';  // Added this line
 
   const items = [
     { 
@@ -88,8 +92,19 @@ function CoursePage() {
       image: ManPhone,
      }
   ];
+  
 
   const filteredItems = filter === 'all' ? items : items.filter(item => item.category === filter);
+
+  const searchFilteredItems = searchQuery 
+    ? filteredItems.filter(item => 
+        (typeof item.description === 'string' && item.description.toLowerCase().includes(searchQuery.toLowerCase())) 
+        || 
+        (`Title ${item.content}`.toLowerCase().includes(searchQuery.toLowerCase()))
+      )
+    : filteredItems;
+
+
 
   return (
     <div>
@@ -103,7 +118,7 @@ function CoursePage() {
           headerText='BLOG'
         />
 
-        <div className="filter-wrapper" style={{paddingTop: 50, marginBottom: 100, borderRadius:30, backgroundColor: 'white', maxWidth: 1200, margin: 'auto'}}>
+<div className="filter-wrapper" style={{paddingTop: 50, marginBottom: 100, borderRadius:30, backgroundColor: 'white', maxWidth: 1200, margin: 'auto'}}>
           <div className="button-container-filter" style={{ marginBottom: 20 }}>
             <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('all')}>All</button>
             <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('A')}>A</button>
@@ -111,20 +126,23 @@ function CoursePage() {
           </div>
         
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'flex-start' }}>
-            {filteredItems.map((item) => (
-              <Link to={`/course/${item.id}`} key={item.id}>
-                <FadeInWrapper>
-                  <CourseCard 
-                    title={`Title ${item.content}`} 
-                    description={item.description} 
-                    image={item.image} 
-                    buttonText={item.buttonText}
-                    buttonBgColor={item.buttonBgColor}
-                    buttonTextColor={item.buttonTextColor}
-                  />
-                </FadeInWrapper>
-              </Link>
-            ))}
+            {searchFilteredItems.length > 0 
+                ? searchFilteredItems.map((item) => (
+                    <Link to={`/course/${item.id}`} key={item.id}>
+                      <FadeInWrapper>
+                        <CourseCard 
+                          title={`Title ${item.content}`} 
+                          description={item.description} 
+                          image={item.image} 
+                          buttonText={item.buttonText}
+                          buttonBgColor={item.buttonBgColor}
+                          buttonTextColor={item.buttonTextColor}
+                        />
+                      </FadeInWrapper>
+                    </Link>
+                ))
+                : <p>Course not found</p>  // Added this to show a message if no courses match the search
+            }
           </div>
         </div>
         <Footer/>

@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import './App.css';
 import Logo from './Logo.png';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);  // State for dropdown
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const navigate = useNavigate();
+
+    const handleSearch = (e) => {
+        if (e.key === 'Enter') {
+            navigate(`/coursepage?search=${searchTerm}`);
+        }
+    };
 
     return (
         <nav className="navbar">
@@ -15,7 +26,6 @@ function Home() {
                 </button>
                 <img src={Logo} style={{ width: 210, paddingRight: 30 }} alt="Logo" />
                 
-                {/* Categories Button & Dropdown */}
                 <div className="categories-container" 
                      onMouseEnter={() => setDropdownOpen(true)} 
                      onMouseLeave={() => setDropdownOpen(false)}>
@@ -29,8 +39,24 @@ function Home() {
 
                 <div className="right-container">
                     <div className={`search-container ${searchOpen ? 'open' : ''}`}>
-                        <input type="text" style={{ marginLeft: 40 }} placeholder="Search For a Course" className="search-input" />
+                        <input 
+                            type="text" 
+                            style={{ marginLeft: 40 }} 
+                            placeholder="Search For a Course" 
+                            className="search-input"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)} 
+                            onKeyPress={handleSearch}
+                        />
                     </div>
+
+                    <button 
+                        className="search-toggle" 
+                        onClick={() => {
+                            navigate(`/coursepage?search=${searchTerm}`);
+                        }}>
+                        🔍
+                    </button>
 
                     <button className="search-toggle" onClick={() => setSearchOpen(!searchOpen)}>
                         🔍
