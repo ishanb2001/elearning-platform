@@ -68,7 +68,7 @@ const CourseImage = ({
             }}>
                 <div className="column-one">
                     <h1 className="header" style={{paddingBottom: 20, fontWeight:'600', fontSize: '15px', color:'white'}}>{headerText}</h1>
-                    <h1 className="body" style={{color: 'white', fontWeight:'700', fontSize: bodyFontSize}}>{text}</h1>
+                    <h1 className="body" style={{letterSpacing: '-0.05em', color: 'white', fontWeight:'700', fontSize: bodyFontSize}}>{text}</h1>
                 </div>
                 <div className="column-two" style={{justifyContent:'flex-end', display: 'flex'}}>
                 </div>

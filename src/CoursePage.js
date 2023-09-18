@@ -125,9 +125,8 @@ function CoursePage() {
             <button style={{marginRight: 20}} className="button-big" onClick={() => setFilter('B')}>B</button>
           </div>
         
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'flex-start' }}>
-            {searchFilteredItems.length > 0 
-                ? searchFilteredItems.map((item) => (
+          <div className="courses-rows" style={{ display: 'flex', flexWrap: 'wrap', gap: '30px' }}>
+            {searchFilteredItems.length > 0 ? searchFilteredItems.map((item) => (
                     <Link to={`/course/${item.id}`} key={item.id}>
                       <FadeInWrapper>
                         <CourseCard 

@@ -13,6 +13,10 @@ import CoursePage from './CoursePage';
 import TextNearTop from './Card';
 import FadeInWrapper from './FadeInWrapper';
 import CourseLanding from './CourseLanding';
+import Teacher from './teacher.png';
+import SignUp from './SignUp';  // import the SignUp component
+import Login from './LogIn';  // import the Login component
+import SignIn from './SignIn';  // import the SignUp component
 
 function Section({ children }) {
   return (
@@ -39,6 +43,14 @@ function App() {
                 <Section><CardComponent /></Section>
                 <Section><CourseCategories /></Section>
               </div>
+              {<CourseImage 
+                    text =  "Become an Instructor today"
+                    bodyFontSize='80px'
+                    headerText='BLOG'
+                    /*bgColor="#635bff"*/
+                    backgroundImg={Teacher}
+                    // Assuming course has videoUrl property. Adjust if needed.
+    /> }
               <Section><CourseImage /></Section>
               <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
                 <Section><TextNearTop /></Section>
@@ -48,7 +60,10 @@ function App() {
             </React.Fragment>
           } />
           <Route path="/CoursePage" element={<CoursePage />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/course/:courseId" element={<CourseLanding />} />
+          <Route exact path="/" component={Home} />
+          <Route path="/signin" component={SignIn} />
           {/* The above line ensures that for any URL of the form /course/5, 
                the CourseLanding component will be displayed. */}
         </Routes>

@@ -11,7 +11,27 @@ function ContentComponent() {
         <div className="content-container" style={{marginTop: 100,}}>
             <div className="text-button-container">
                 <h1 className="header">BENIFITS</h1>
-                <h1 style={{ fontSize: 65, marginTop: 0, letterSpacing: '-0.05em' }}>Comprehensive <span>Online Platform</span> For Learning</h1>
+                <h1 style={{ fontSize: 65, marginTop: 0, letterSpacing: '-0.05em' }}>
+    <span style={{ position: 'relative' }}>
+        Comprehensive &nbsp;
+        <span style={{
+            position: 'absolute',
+            content: '""',
+            height: '20px',
+            width: '100%',
+            backgroundColor: '#b2dea3',
+            bottom: '6px', // Adjust this to control the position of the underline
+            left: 0,
+            zIndex: -1  // This moves the underline behind the text
+        }}></span>
+    </span> 
+    Online Platform For Learning
+</h1>
+
+
+
+
+
                 
                 <div style={{marginBottom: 40, marginTop: 0}}>
                     <button className="button-big-cta">Join The Community</button>
@@ -41,7 +61,7 @@ function ContentComponent() {
                     textColor="white" 
                     fontSize="20px"
                 >
-                    <Label buttonBgColor="white" buttonTextColor="black" buttonText="TRACKING"/>
+                    
                     <h2 style={{ marginBottom: 0, marginTop: 100 }}>Easily Track Your Progress</h2>
                 </Cards>
                 <Cards index={1}
@@ -50,7 +70,7 @@ function ContentComponent() {
                     fontSize="20px"
                 >
                     <Label buttonBgColor="rgba(255, 255, 255, 0.1)" buttonText="EXPLORE NOW"/>
-                    <h2 style={{ marginBottom: 0, marginTop: 100 }}>120+ Courses</h2>
+                    <h2 style={{ marginBottom: 0, marginTop: 100}}>120+ Courses</h2>
                 </Cards>
             </div>
         </div>
