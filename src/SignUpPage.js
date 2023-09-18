@@ -10,7 +10,7 @@ import {
 import { app } from './firebase';
 import { useNavigate, useLocation } from 'react-router-dom';  
 
-function SignIn() {
+function SignUp() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
@@ -61,14 +61,12 @@ function SignIn() {
                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                 
-                <button onClick={handleEmailSignIn}>Email Sign In</button>
                 <button onClick={handleEmailSignUp}>Email Sign Up</button>
                 
-                <button onClick={handleGoogleSignIn}>Sign In with Google</button>
             </div>
             <Footer/>
         </div>
     );
 }
 
-export default SignIn;
+export default SignUp;

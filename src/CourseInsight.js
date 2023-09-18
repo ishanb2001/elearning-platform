@@ -1,31 +1,35 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getAuth } from '@firebase/auth';  // Added this import
+import { getAuth } from '@firebase/auth';  
 import coursesData from './coursesData';
 import Pfp from './pfp.png';
+import { useCart } from './CartContext';
 
-import { useNavigate } from 'react-router-dom'; // Added this import
+import { useNavigate } from 'react-router-dom'; 
 
 function CourseInsight() {
     const { courseId } = useParams();
     const course = coursesData.find(c => c.id === courseId);
     const navigate = useNavigate();  // Initialize navigate hook
 
-    const handleEnrollClick = () => {
-        const auth = getAuth();
-        if (auth.currentUser) {
-            // User is signed in, navigate to the cart page
-            navigate('/cart');
-        } else {
-            // User is not signed in, redirect to sign-in page (or show a message)
-            alert("Please sign in to enroll");
-            navigate('/signin');
-        }
-    };
+    const { addToCart } = useCart();
+
+const handleEnrollClick = () => {
+    const auth = getAuth();
+    if (auth.currentUser) {
+        addToCart(course);
+        navigate('/cart');
+    } else {
+        alert("Please sign in to enroll");
+        navigate('/signin');
+    }
+};
+    
 
     if (!course) {
         return <div>Course not found</div>;
     }
+    
 
     return (
         <div style={{ marginTop: 60, padding: "0 20px" }}>

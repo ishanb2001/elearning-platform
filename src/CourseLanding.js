@@ -25,7 +25,7 @@ function CourseLanding() {
                     headerText='BLOG'
                     /*bgColor="#635bff"*/
                     videoUrl={course.videoUrl} 
-                    // Assuming course has videoUrl property. Adjust if needed.
+                    
     /> }        <div style={{maxWidth: 1200, margin: 'auto' }}>
                 <CourseInsight/>
                 
