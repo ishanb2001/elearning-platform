@@ -1,5 +1,6 @@
 import React from 'react';
 import './App';
+import Logo from './logo-white.png';
 
 function Footer() {
   return (
@@ -30,7 +31,7 @@ function Footer() {
           </ul>
         </div>
 
-        // Social Media Icons or any other information can go here
+        <img src={Logo} style={{height: '70px', paddingRight: 30 }} alt="Logo" />
       </div>
     </footer>
   );

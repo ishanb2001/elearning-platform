@@ -13,6 +13,12 @@ import CoursePage from './CoursePage';
 import TextNearTop from './Card';
 import FadeInWrapper from './FadeInWrapper';
 import CourseLanding from './CourseLanding';
+import Teacher from './teacher.png';
+import SignIn from './SignIn';
+import SignUpPage from './SignUpPage';
+import Cart from './Cart';
+import { CartProvider } from './CartContext';
+import BarChart from './BarChart'; // Adjust the import path as necessary
 
 function Section({ children }) {
   return (
@@ -24,36 +30,47 @@ function Section({ children }) {
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={
-            <React.Fragment>
-              <FadeInWrapper>
-                <Section><Home /></Section>
-              </FadeInWrapper>
-              <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={
+              <React.Fragment>
                 <FadeInWrapper>
-                  <Section><ContentComponent /></Section>
+                  <Section><Home /></Section>
                 </FadeInWrapper>
-                <Section><CardComponent /></Section>
-                <Section><CourseCategories /></Section>
-              </div>
-              <Section><CourseImage /></Section>
-              <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
-                <Section><TextNearTop /></Section>
-                <Section><Pros /></Section>
-              </div>
-              <Section><Footer /></Section>
-            </React.Fragment>
-          } />
-          <Route path="/CoursePage" element={<CoursePage />} />
-          <Route path="/course/:courseId" element={<CourseLanding />} />
-          {/* The above line ensures that for any URL of the form /course/5, 
-               the CourseLanding component will be displayed. */}
-        </Routes>
-      </div>
-    </Router>
+                <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
+                  <FadeInWrapper>
+                    <Section><ContentComponent /></Section>
+                    <BarChart />
+                  </FadeInWrapper>
+                  <Section><CardComponent /></Section>
+                  <Section><CourseCategories /></Section>
+                </div>
+                <Section>
+                  <CourseImage 
+                    text="Become an Instructor today"
+                    bodyFontSize='80px'
+                    headerText='BLOG'
+                    backgroundImg={Teacher}
+                  />
+                </Section>
+                <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
+                  <Section><TextNearTop /></Section>
+                  <Section><Pros /></Section>
+                </div>
+                <Section><Footer /></Section>
+              </React.Fragment>
+            } />
+            <Route path="/CoursePage" element={<CoursePage />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/course/:courseId" element={<CourseLanding />} />
+          </Routes>
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 

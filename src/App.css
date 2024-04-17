@@ -5,7 +5,8 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Manrope', sans-serif;
+  /*font-family: 'Manrope', sans-serif;*/
+  font-family: 'SF Pro Display', sans-serif;  
 }
 
 .App {
@@ -31,6 +32,30 @@ html {
   overflow: hidden;
 }
 
+.user-menu {
+  position: relative;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.user-dropdown button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+
 
 .card.fade-in {
   opacity: 1;
@@ -50,10 +75,21 @@ html {
 body {
   background-color: white;
   font-family: 'Manrope', sans-serif;
+  /*font-family: 'SF Pro Display', sans-serif;  */
   color: black;
   opacity: 1; /* Start with body being transparent */
   overflow-x: hidden; /* Avoid any potential horizontal scroll */
   transition: opacity 0.5s;
+}
+
+.body {
+  font-Size: 15px;
+  line-Height: 1.5;
+  color: #000000;
+  font-Weight: 500;
+  margin-Top:10px;
+  line-Height: 1.4;
+  letter-spacing: 0.02em;
 }
 
 .fadeIn {
@@ -89,6 +125,16 @@ body {
 .content-container {
   position: relative;
   /* other styles... */
+}
+
+.course-body-title {
+  font-size: 14px;
+  font-weight: 700;
+  
+}
+
+.course-body {
+  font-size: 14px;
 }
 
 .video-background {
@@ -149,8 +195,17 @@ body, .main-content {
 }
 
 .search-input {
-  width: 60%;
+  width: 50%;
+  transition: width 0.3s ease-in-out; /* This line makes the width change smooth */
 }
+
+.search-input:focus {
+  width: 70%;
+  outline: none; /* Optionally remove the default browser outline on focus */
+}
+
+
+
 
 
 
@@ -167,6 +222,12 @@ body, .main-content {
   font-weight: 600;
   font-size: 1.1rem;
 
+}
+
+
+
+.benifits {
+  border: 1px solid #e2e2e2;
 }
 
 /* All menu buttons by default will have a hover effect with a sliding underline */
@@ -267,7 +328,7 @@ body, .main-content {
 }
 
 .search-input:focus {
-  border: 3px solid #6d37ff;
+  border: 2px solid #6d37ff;
 }
 
 .content-container {
@@ -489,14 +550,24 @@ input:focus {
 .menu-button {
   display: block;
   font-family: 'Manrope', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   /* ... any other styles ... */
+}
+
+.course-info {
+  flex-direction: column;
+  display: flex;
+  flex-Direction: row;
+}
+
+.courses-rows {
+  justify-content: flex-start;
 }
 
 
 .card:hover {
   transition: transform 0.3s ease-in-out; /* Adds smoothness to the scaling effect */
-  transform: scale(1.05); /* Scales the card up by 5% on hover */
+  transform: scale(1.03); /* Scales the card up by 5% on hover */
 }
 
 .course-img {
@@ -511,10 +582,6 @@ input:focus {
   font-Size: 15px; 
   color:#635bff;
   border-radius: 40px;
-}
-
-span {
-  color:#635bff;
 }
 
 .line {
@@ -794,15 +861,6 @@ h1 {
   letter-spacing: -0.05em;
 }
 
-.body {
-  font-Weight: 500;
-  color: #333;
-  margin-Top:10px;
-  font-Size: 14px;
-  line-Height: 1.2;
-  letter-spacing: -0.05em;
-}
-
 .divider {
   border-Top: '0.5px solid #D3D3D3';
   margin-Bottom: '20px';
@@ -913,6 +971,16 @@ h1 {
     max-width: 100%;
     width: 100%;
   }
+
+  .course-info {
+    flex-direction: column;
+    display: flex;
+    flex-Direction: column;
+  }
+
+  .courses-rows {
+    justify-content: center;
+  }
 }
 
 
@@ -943,7 +1011,6 @@ h1 {
   .body {
     margin-right: 0px;
   }
-
 
   
 }

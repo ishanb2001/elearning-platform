@@ -1,6 +1,5 @@
-// FilterSidebar.js
 import React, { useState } from 'react';
-import './App.css';  // Make sure your CSS with the above styles is here
+import './App.css';  
 
 function FilterSidebar() {
   const [filters, setFilters] = useState({
