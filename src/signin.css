@@ -1,0 +1,51 @@
+/* Style for container */
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 240px;
+    padding: 0 20px;  /* Padding on the sides so content doesn't touch edges */
+}
+
+/* Style for title */
+.signin-title {
+    margin-bottom: 20px;
+}
+
+/* Style for inputs */
+.signin-input {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-sizing: border-box;  /* This ensures that padding doesn't increase total width */
+}
+
+/* General button style */
+.signin-btn {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signin-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Special style for Google button (optional) */
+.google-btn {
+    background-color: #db4437;
+}
+
+.google-btn:hover {
+    background-color: #c73221;
+}

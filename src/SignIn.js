@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import Footer from "./Footer";
+import Home from "./Home";
+import './signin.css'; // Adjust path as necessary
+import FadeInWrapper from './FadeInWrapper';
+
 import { 
     getAuth, 
     signInWithPopup, 
@@ -23,7 +27,8 @@ function SignIn() {
     const { from } = location.state || { from: { pathname: "/" } };
 
     const handleGoogleSignIn = () => {
-        signInWithPopup(auth, provider).then((result) => {
+        signInWithPopup(auth, provider)
+        .then((result) => {
             console.log("User signed in: ", result.user);
             navigate(from); // Use this instead of `history.replace(from)`
         }).catch((error) => {
@@ -54,20 +59,27 @@ function SignIn() {
     };
 
     return (
+        <FadeInWrapper>
+        <div>
+            <Home/>
         <div className="signin-container">
-            <h2>Sign In</h2>
             
-            <div>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+            <div className="user-login">
+            <button className="signin-btn google-btn" onClick={handleGoogleSignIn}>Sign In with Google</button>
+            <h2 className="signin-title">Sign In</h2>
+                <input className="signin-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+                <input className="signin-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                 
-                <button onClick={handleEmailSignIn}>Email Sign In</button>
-                <button onClick={handleEmailSignUp}>Email Sign Up</button>
+                <button className="signin-btn" onClick={handleEmailSignIn}>Email Sign In</button>
                 
-                <button onClick={handleGoogleSignIn}>Sign In with Google</button>
+                
             </div>
-            <Footer/>
+            </div>
+            
         </div>
+        <Footer/>
+        </FadeInWrapper>
+
     );
 }
 

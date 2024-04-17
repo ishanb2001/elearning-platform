@@ -18,6 +18,7 @@ import SignIn from './SignIn';
 import SignUpPage from './SignUpPage';
 import Cart from './Cart';
 import { CartProvider } from './CartContext';
+import BarChart from './BarChart'; // Adjust the import path as necessary
 
 function Section({ children }) {
   return (
@@ -41,6 +42,7 @@ function App() {
                 <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
                   <FadeInWrapper>
                     <Section><ContentComponent /></Section>
+                    <BarChart />
                   </FadeInWrapper>
                   <Section><CardComponent /></Section>
                   <Section><CourseCategories /></Section>

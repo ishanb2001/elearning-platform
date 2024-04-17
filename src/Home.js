@@ -94,9 +94,9 @@ function Home() {
 
                 <div className={`menu ${menuOpen ? 'open' : ''}`}>
     <button className="menu-button">Home</button>
-    <button className="menu-button" onClick={navigateToCart}>About</button>
+    <button className="menu-button" onClick={navigateToCart}>Cart</button>
     
-    {!currentUser && <button style={{marginRight: 20, fontSize: '14px'}} onClick={navigateToSignUp} className="button-big-cta">Contact</button>}
+    {!currentUser && <button style={{backgroundColor: 'white', marginRight: 20, fontSize: '14px'}} onClick={navigateToSignUp} className="menu-button">Sign In</button>}
 
     {currentUser ? (
         <div className="user-menu">
